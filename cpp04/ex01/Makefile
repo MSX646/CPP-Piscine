@@ -1,9 +1,9 @@
-NAME = Zombie
+NAME = Animals
 FLAGS = -Wall -Wextra -Werror
 RM = rm -rf
 CC = clang++
 
-SRC = Zombie.cpp zombieHorde.cpp main.cpp
+SRC = Animal.cpp Dog.cpp Cat.cpp  Brain.cpp main.cpp
 OBJ = $(SRC:.cpp=.o)
 
 all: $(NAME)
@@ -11,7 +11,7 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	$(CC) $(FLAGS) $(OBJ) -o $(NAME)
 
-%.o:%.cpp Zombie.hpp zombieHorde.hpp main.hpp
+%.o:%.cpp Animal.hpp Dog.hpp Cat.hpp Brain.hpp main.hpp
 	$(CC) $(FLAGS) -c $< -o $@
 
 clean:

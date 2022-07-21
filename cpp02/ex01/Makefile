@@ -11,7 +11,7 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	$(CC) $(FLAGS) $(OBJ) -o $(NAME)
 
-%.o:%.cpp Fixed.cpp main.cpp
+%.o:%.cpp Fixed.hpp main.hpp
 	$(CC) $(FLAGS) -c $< -o $@
 
 clean:

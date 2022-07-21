@@ -11,7 +11,7 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	$(CC) $(FLAGS) $(OBJ) -o $(NAME)
 
-%.o:%.cpp Zombie.cpp newZombie.cpp randomChump.cpp main.cpp
+%.o:%.cpp Zombie.hpp newZombie.hpp randomChump.hpp main.hpp
 	$(CC) $(FLAGS) -c $< -o $@
 
 clean:

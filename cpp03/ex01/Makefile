@@ -11,7 +11,7 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	$(CC) $(FLAGS) $(OBJ) -o $(NAME)
 
-%.o:%.cpp ClapTrap.cpp main.cpp ScavTrap.cpp
+%.o:%.cpp ClapTrap.hpp main.hpp ScavTrap.hpp
 	$(CC) $(FLAGS) -c $< -o $@
 
 clean:
